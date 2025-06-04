@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export const useProducts = () => {
   const [products, setProducts] = useState([]);
@@ -7,11 +7,17 @@ export const useProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('/data.json');
+        // Use the correct path for GitHub Pages
+        const response = await fetch(`${process.env.PUBLIC_URL}/data.json`);
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const data = await response.json();
         setProducts(data);
       } catch (error) {
-        console.error('Error fetching products:', error);
+        console.error("Error fetching products:", error);
       } finally {
         setLoading(false);
       }
