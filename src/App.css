@@ -493,7 +493,6 @@ h1 {
   align-items: center;
   padding-top: 1.5rem;
   margin-top: 1.5rem;
-  border-top: 1px solid var(--color-rose-100);
 }
 
 .order-total span:first-child {
