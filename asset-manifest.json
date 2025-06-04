@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.64fcd9d3.css",
-    "main.js": "/static/js/main.6f9af390.js",
-    "static/js/453.707bc0b2.chunk.js": "/static/js/453.707bc0b2.chunk.js",
-    "static/media/RedHatText-VariableFont_wght.ttf": "/static/media/RedHatText-VariableFont_wght.885cbf49d3f8ee6d075c.ttf",
-    "index.html": "/index.html",
-    "main.64fcd9d3.css.map": "/static/css/main.64fcd9d3.css.map",
-    "main.6f9af390.js.map": "/static/js/main.6f9af390.js.map",
-    "453.707bc0b2.chunk.js.map": "/static/js/453.707bc0b2.chunk.js.map"
+    "main.css": "/product-list-with-cart/static/css/main.6e95b009.css",
+    "main.js": "/product-list-with-cart/static/js/main.8cc88c8f.js",
+    "static/js/453.707bc0b2.chunk.js": "/product-list-with-cart/static/js/453.707bc0b2.chunk.js",
+    "static/media/RedHatText-VariableFont_wght.ttf": "/product-list-with-cart/static/media/RedHatText-VariableFont_wght.885cbf49d3f8ee6d075c.ttf",
+    "index.html": "/product-list-with-cart/index.html",
+    "main.6e95b009.css.map": "/product-list-with-cart/static/css/main.6e95b009.css.map",
+    "main.8cc88c8f.js.map": "/product-list-with-cart/static/js/main.8cc88c8f.js.map",
+    "453.707bc0b2.chunk.js.map": "/product-list-with-cart/static/js/453.707bc0b2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64fcd9d3.css",
-    "static/js/main.6f9af390.js"
+    "static/css/main.6e95b009.css",
+    "static/js/main.8cc88c8f.js"
   ]
 }
