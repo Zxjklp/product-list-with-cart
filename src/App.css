@@ -200,6 +200,10 @@ h1 {
   height: 1.25rem;
 }
 
+.quantity-btn .minus-icon {
+  height: 0.55rem;
+}
+
 .quantity-display {
   color: white;
   font-weight: 600;

@@ -75,7 +75,7 @@ function App() {
                         )
                       }
                     >
-                      <img
+                      <img className='minus-icon'
                         src={`${process.env.PUBLIC_URL}/assets/images/icon-decrement-quantity.svg`}
                         alt='Decrease quantity'
                       />
