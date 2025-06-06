@@ -48,77 +48,93 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Desserts</h1>
-      <div className='products-grid'>
-        {products.map((product, index) => {
-          const itemInCart = getItemInCart(product.name);
+      <div className='main-content'>
+        <h1>Desserts</h1>
+        <div className='products-grid'>
+          {products.map((product, index) => {
+            const itemInCart = getItemInCart(product.name);
 
-          return (
-            <div key={index} className='product-card'>
-              <div className='product-image'>
-                <img
-                  src={`${process.env.PUBLIC_URL}${product.image.mobile.replace(
-                    "./assets",
-                    "/assets"
-                  )}`}
-                  alt={product.name}
-                />
+            return (
+              <div key={index} className='product-card'>
+                <div className='product-image'>
+                  <picture>
+                    <source
+                      media='(min-width: 1024px)'
+                      srcSet={`${
+                        process.env.PUBLIC_URL
+                      }${product.image.desktop.replace("./assets", "/assets")}`}
+                    />
+                    <source
+                      media='(min-width: 768px)'
+                      srcSet={`${
+                        process.env.PUBLIC_URL
+                      }${product.image.tablet.replace("./assets", "/assets")}`}
+                    />
+                    <img
+                      src={`${
+                        process.env.PUBLIC_URL
+                      }${product.image.mobile.replace("./assets", "/assets")}`}
+                      alt={product.name}
+                    />
+                  </picture>
 
-                {itemInCart ? (
-                  <div className='quantity-control'>
+                  {itemInCart ? (
+                    <div className='quantity-control'>
+                      <button
+                        className='quantity-btn'
+                        onClick={() =>
+                          handleQuantityChange(
+                            product.name,
+                            itemInCart.quantity - 1
+                          )
+                        }
+                      >
+                        <img
+                          className='minus-icon'
+                          src={`${process.env.PUBLIC_URL}/assets/images/icon-decrement-quantity.svg`}
+                          alt='Decrease quantity'
+                        />
+                      </button>
+                      <span className='quantity-display'>
+                        {itemInCart.quantity}
+                      </span>
+                      <button
+                        className='quantity-btn'
+                        onClick={() =>
+                          handleQuantityChange(
+                            product.name,
+                            itemInCart.quantity + 1
+                          )
+                        }
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/images/icon-increment-quantity.svg`}
+                          alt='Increase quantity'
+                        />
+                      </button>
+                    </div>
+                  ) : (
                     <button
-                      className='quantity-btn'
-                      onClick={() =>
-                        handleQuantityChange(
-                          product.name,
-                          itemInCart.quantity - 1
-                        )
-                      }
-                    >
-                      <img className='minus-icon'
-                        src={`${process.env.PUBLIC_URL}/assets/images/icon-decrement-quantity.svg`}
-                        alt='Decrease quantity'
-                      />
-                    </button>
-                    <span className='quantity-display'>
-                      {itemInCart.quantity}
-                    </span>
-                    <button
-                      className='quantity-btn'
-                      onClick={() =>
-                        handleQuantityChange(
-                          product.name,
-                          itemInCart.quantity + 1
-                        )
-                      }
+                      className='add-to-cart-btn'
+                      onClick={() => handleAddToCart(product)}
                     >
                       <img
-                        src={`${process.env.PUBLIC_URL}/assets/images/icon-increment-quantity.svg`}
-                        alt='Increase quantity'
+                        src={`${process.env.PUBLIC_URL}/assets/images/icon-add-to-cart.svg`}
+                        alt='Cart'
                       />
+                      Add to Cart
                     </button>
-                  </div>
-                ) : (
-                  <button
-                    className='add-to-cart-btn'
-                    onClick={() => handleAddToCart(product)}
-                  >
-                    <img
-                      src={`${process.env.PUBLIC_URL}/assets/images/icon-add-to-cart.svg`}
-                      alt='Cart'
-                    />
-                    Add to Cart
-                  </button>
-                )}
+                  )}
+                </div>
+                <div className='product-info'>
+                  <p className='product-category'>{product.category}</p>
+                  <h3>{product.name}</h3>
+                  <p className='product-price'>${product.price.toFixed(2)}</p>
+                </div>
               </div>
-              <div className='product-info'>
-                <p className='product-category'>{product.category}</p>
-                <h3>{product.name}</h3>
-                <p className='product-price'>${product.price.toFixed(2)}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
       {/* Cart Summary */}
