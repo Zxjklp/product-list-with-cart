@@ -258,14 +258,12 @@ h1 {
 
 @media (min-width: 768px) {
   .quantity-control {
-    /* padding: 0.55rem 2rem; */
     min-width: 11rem;
   }
 }
 
 @media (min-width: 1024px) {
   .quantity-control {
-    /* padding: 0.65rem 2.25rem; */
     min-width: 12rem;
   }
 }
@@ -320,14 +318,12 @@ h1 {
 
 @media (min-width: 768px) {
   .quantity-display {
-    /* font-size: 0.875rem; */
     min-width: 2.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .quantity-display {
-    /* font-size: 1rem; */
     min-width: 2.5rem;
   }
 }
