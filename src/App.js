@@ -81,6 +81,7 @@ function App() {
                   {itemInCart ? (
                     <div className='quantity-control'>
                       <button
+                        type='button'
                         className='quantity-btn'
                         onClick={() =>
                           handleQuantityChange(
@@ -99,6 +100,7 @@ function App() {
                         {itemInCart.quantity}
                       </span>
                       <button
+                        type='button'
                         className='quantity-btn'
                         onClick={() =>
                           handleQuantityChange(
@@ -115,6 +117,7 @@ function App() {
                     </div>
                   ) : (
                     <button
+                      type='button'
                       className='add-to-cart-btn'
                       onClick={() => handleAddToCart(product)}
                     >
@@ -166,6 +169,7 @@ function App() {
                   </div>
                 </div>
                 <button
+                  type='button'
                   className='remove-item-btn'
                   onClick={() => removeFromCart(item.name)}
                 >
@@ -192,7 +196,11 @@ function App() {
               </span>
             </div>
 
-            <button className='confirm-order-btn' onClick={handleConfirmOrder}>
+            <button
+              type='button'
+              className='confirm-order-btn'
+              onClick={handleConfirmOrder}
+            >
               Confirm Order
             </button>
           </div>
@@ -249,6 +257,7 @@ function App() {
             </div>
 
             <button
+              type='button'
               className='start-new-order-btn'
               onClick={handleStartNewOrder}
             >
