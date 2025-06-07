@@ -394,7 +394,7 @@ h1 {
   border-bottom: none;
 }
 
-.cart-item-info h4 {
+.cart-item-info h3 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-rose-900);
@@ -639,7 +639,7 @@ h1 {
   object-fit: cover;
 }
 
-.order-item-details h4 {
+.order-item-details h3 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-rose-900);

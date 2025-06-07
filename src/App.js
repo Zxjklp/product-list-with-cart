@@ -154,7 +154,7 @@ function App() {
             {cart.map((item, index) => (
               <div key={index} className='cart-item'>
                 <div className='cart-item-info'>
-                  <h4>{item.name}</h4>
+                  <h3>{item.name}</h3>
                   <div className='cart-item-details'>
                     <span className='cart-item-quantity'>{item.quantity}x</span>
                     <span className='cart-item-price'>
@@ -223,7 +223,7 @@ function App() {
                       className='order-item-thumbnail'
                     />
                     <div className='order-item-details'>
-                      <h4>{item.name}</h4>
+                      <h3>{item.name}</h3>
                       <div className='order-item-pricing'>
                         <span className='order-item-quantity'>
                           {item.quantity}x
