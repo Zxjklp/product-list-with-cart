@@ -111,7 +111,7 @@ h1 {
   overflow: hidden;
 }
 
-.product-card h3 {
+.product-card h2 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-rose-900);
@@ -344,13 +344,13 @@ h1 {
     overflow-y: auto;
   }
 
-  .cart-summary h2 {
+  .cart-summary h3 {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
 }
 
-.cart-summary h2 {
+.cart-summary h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-red);
@@ -394,7 +394,7 @@ h1 {
   border-bottom: none;
 }
 
-.cart-item-info h3 {
+.cart-item-info h4 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-rose-900);
@@ -639,7 +639,7 @@ h1 {
   object-fit: cover;
 }
 
-.order-item-details h3 {
+.order-item-details h4 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-rose-900);

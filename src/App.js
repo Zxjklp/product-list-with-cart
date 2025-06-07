@@ -128,7 +128,7 @@ function App() {
                 </div>
                 <div className='product-info'>
                   <p className='product-category'>{product.category}</p>
-                  <h3>{product.name}</h3>
+                  <h2>{product.name}</h2>
                   <p className='product-price'>${product.price.toFixed(2)}</p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ function App() {
 
       {/* Cart Summary */}
       <div className='cart-summary'>
-        <h2>Your Cart ({getTotalItems()})</h2>
+        <h3>Your Cart ({getTotalItems()})</h3>
         {getTotalItems() === 0 ? (
           <div className='cart-empty'>
             <img
@@ -154,7 +154,7 @@ function App() {
             {cart.map((item, index) => (
               <div key={index} className='cart-item'>
                 <div className='cart-item-info'>
-                  <h3>{item.name}</h3>
+                  <h4>{item.name}</h4>
                   <div className='cart-item-details'>
                     <span className='cart-item-quantity'>{item.quantity}x</span>
                     <span className='cart-item-price'>
@@ -223,7 +223,7 @@ function App() {
                       className='order-item-thumbnail'
                     />
                     <div className='order-item-details'>
-                      <h3>{item.name}</h3>
+                      <h4>{item.name}</h4>
                       <div className='order-item-pricing'>
                         <span className='order-item-quantity'>
                           {item.quantity}x
