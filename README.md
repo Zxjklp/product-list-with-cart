@@ -51,8 +51,6 @@ Users should be able to:
 
 ### What I learned
 
-Working on this project helped me improve my skills in several key areas:
-
 ** React Context API for Global State Management **
 
 ```javascript
