@@ -53,7 +53,7 @@ Users should be able to:
 
 Working on this project helped me improve my skills in several key areas:
 
-** React Context API for Global State Management**
+** React Context API for Global State Management **
 
 ```javascript
 const CartContext = createContext();
