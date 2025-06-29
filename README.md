@@ -11,7 +11,6 @@ This is a solution to the [Product list with cart challenge on Frontend Mentor](
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -54,7 +53,7 @@ Users should be able to:
 
 Working on this project helped me improve my skills in several key areas:
 
-**1. React Context API for Global State Management**
+** React Context API for Global State Management**
 
 ```javascript
 const CartContext = createContext();
@@ -72,38 +71,6 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-```
-
-**2. Responsive Image Implementation**
-
-```jsx
-<picture>
-  <source media='(min-width: 1024px)' srcSet={product.image.desktop} />
-  <source media='(min-width: 768px)' srcSet={product.image.tablet} />
-  <img src={product.image.mobile} alt={product.name} />
-</picture>
-```
-
-**3. Component-Based CSS Organization**
-
-```css
-/* Base styles */
-.quantity-control {
-  /* mobile styles */
-}
-
-/* Responsive breakpoints */
-@media (min-width: 768px) {
-  .quantity-control {
-    /* tablet styles */
-  }
-}
-
-@media (min-width: 1024px) {
-  .quantity-control {
-    /* desktop styles */
-  }
-}
 ```
 
 ## Author
